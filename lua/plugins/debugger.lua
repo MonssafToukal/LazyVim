@@ -16,6 +16,7 @@ return {
           automatic_installation = true,
           ensure_installed = {
             "delve",
+            "codelldb",
           },
         },
       },
@@ -193,6 +194,18 @@ return {
             args = { "workspaces", "delete", "-p", "prj-mec2HCPBix4PB97t", "-o", "PCI-DEV" },
           },
         },
+        cpp = {
+          {
+            name = "Launch file",
+            type = "codelldb",
+            request = "launch",
+            program = function()
+              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            end,
+            cwd = "${workspaceFolder}",
+            stopOnEntry = false,
+          },
+        },
       }
       dap.adapters.go = {
         type = "server",
@@ -200,6 +213,14 @@ return {
         executable = {
           command = "dlv",
           args = { "dap", "-l", "127.0.0.1:${port}" },
+        },
+      }
+      dap.adapters.codelldb = {
+        type = "server",
+        port = "${port}",
+        executable = {
+          command = vim.fn.stdpath("data") .. "/mason/bin/codelldb",
+          args = { "--port", "${port}" },
         },
       }
     end,
