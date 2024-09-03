@@ -162,6 +162,14 @@ return {
             name = "Debug",
             request = "launch",
             program = "${file}",
+            args = { "migrate", "-p", "dev-EU-dev-mtoukal", "-o", "PCI-DEV" },
+          },
+          {
+            type = "go",
+            name = "tfe2otf",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "migrate", "-p", "dev-EU-dev-mtoukal", "-o", "PCI-DEV" },
           },
         },
       }
