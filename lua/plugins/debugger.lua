@@ -166,10 +166,17 @@ return {
           },
           {
             type = "go",
-            name = "tfe2otf",
+            name = "tfe2otf migrate -p 'integ-EU-GRA1-preprod' -o PCI-EU",
             request = "launch",
             program = "${workspaceFolder}/main.go",
-            args = { "migrate", "-p", "dev-EU-dev-mtoukal", "-o", "PCI-DEV" },
+            args = { "migrate", "-p", "integ-EU-GRA1-preprod", "-o", "PCI-EU" },
+          },
+          {
+            type = "go",
+            name = "tfe2otf migrate --all -o PCI-US",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "migrate", "-a", "-o", "PCI-US" },
           },
         },
       }
