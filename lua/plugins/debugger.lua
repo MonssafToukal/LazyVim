@@ -178,6 +178,13 @@ return {
             program = "${workspaceFolder}/main.go",
             args = { "migrate", "-a", "-o", "PCI-US" },
           },
+          {
+            type = "go",
+            name = "tfe2otf workspaces lock dev-EU-dev-mtoukal-legacy-pki",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "workspaces", "lock", "dev-EU-dev-mtoukal-legacy-pki", "-o", "PCI-DEV" },
+          },
         },
       }
       dap.adapters.go = {
