@@ -185,6 +185,13 @@ return {
             program = "${workspaceFolder}/main.go",
             args = { "workspaces", "lock", "dev-EU-dev-mtoukal-legacy-pki", "-o", "PCI-DEV" },
           },
+          {
+            type = "go",
+            name = "tfe2otf workspaces delete -p 'Default Project'",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "workspaces", "delete", "-p", "prj-mec2HCPBix4PB97t", "-o", "PCI-DEV" },
+          },
         },
       }
       dap.adapters.go = {
