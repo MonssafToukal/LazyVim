@@ -9,7 +9,7 @@ return {
     require("oil").setup({
       -- columns = { "icons" },
       keymaps = {
-        ["<C-h"] = false,
+        ["<C-h>"] = false,
         ["<M-h>"] = "actions.select_split",
       },
       view_options = {
