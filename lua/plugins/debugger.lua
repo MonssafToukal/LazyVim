@@ -181,6 +181,13 @@ return {
           },
           {
             type = "go",
+            name = "tfe2otf workspaces list -p [id of dev-EU-dev-mtoukal]",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "workspaces", "list", "-p", "prj-Uv1XHyQfc9oAo1mq", "-o", "PCI-DEV" },
+          },
+          {
+            type = "go",
             name = "tfe2otf workspaces lock dev-EU-dev-mtoukal-legacy-pki",
             request = "launch",
             program = "${workspaceFolder}/main.go",
@@ -192,6 +199,13 @@ return {
             request = "launch",
             program = "${workspaceFolder}/main.go",
             args = { "workspaces", "delete", "-p", "prj-mec2HCPBix4PB97t", "-o", "PCI-DEV" },
+          },
+          {
+            type = "go",
+            name = "tfe2otf migrate -o PCI-DEV -w live-dev-tfe-workspaces-dev-mtoukal",
+            request = "launch",
+            program = "${workspaceFolder}/main.go",
+            args = { "migrate", "-o", "PCI-DEV", "-w", "live-dev-tfe-workspaces-dev-mtoukal" },
           },
         },
         cpp = {
