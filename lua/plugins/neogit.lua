@@ -19,6 +19,9 @@ return {
         ["azure.com"] = "https://dev.azure.com/${owner}/_git/${repository}/pullrequestcreate?sourceRef=${branch_name}&targetRef=${target}",
         ["stash.ovh.net"] = "https://stash.ovh.net/${owner}/${repository}/pull-requests/new?source=${branch_name}&t=1",
       },
+      integrations = {
+        diffview = true,
+      },
     })
   end,
 }
