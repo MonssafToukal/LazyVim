@@ -4,7 +4,7 @@ return {
     projects = { -- define project roots
       "~/projects/*",
       "~/orgfiles",
-      -- "~/.config/*",
+      "~/.config/*",
     },
     picker = {
       type = "telescope", -- or "fzf-lua"
