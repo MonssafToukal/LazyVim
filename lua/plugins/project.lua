@@ -5,6 +5,7 @@ return {
       "~/projects/*",
       "~/orgfiles",
       "~/.config/*",
+      "~/src/*",
     },
     picker = {
       type = "fzf-lua", -- or "fzf-lua"
